@@ -55,6 +55,7 @@ class Hamster {
 class Person {
   constructor(name) {
     (this.name = name),
+      (this.age = 0),
       (this.height = 0),
       (this.weight = 0),
       (this.mood = 0),
@@ -88,8 +89,74 @@ class Person {
     this.bankAccount += 10;
   }
   buyHamster(hamster) {
-    this.hamster.push(hamster);
+    this.hamsters.push(hamster);
     this.mood += 10;
-    this.bankAccount -= hamster.HamstergetPrice();
+    this.bankAccount -= hamster.getPrice();
   }
 }
+
+// * Create a Story with your Person class
+// * Feel free to update or add methods to automate some of these tasks.
+// *    Instantiate a new Person named Timmy
+// *    Age Timmy five years
+// *    At this point Timmy's a little bummed. As a precocious child, he feels he's "seen it all" already. Have him eat five times.
+// *    Now Timmy's a little heavier than he wants to be. Kindergarten's coming up and he wants to look good. Have him exercise five times
+// *    Age Timmy 9 years
+
+const timmy = new Person("Timmy");
+for (let i = 0; i < 5; i++) {
+  timmy.ageUp();
+}
+// console.log(timmy);
+
+// timmy.eat();
+// timmy.eat();
+// timmy.eat();
+// timmy.eat();
+// timmy.eat();
+
+for (let i = 0; i < 5; i++) {
+  timmy.eat();
+}
+
+// timmy.exercise();
+// timmy.exercise();
+// timmy.exercise();
+// timmy.exercise();
+// timmy.exercise();
+
+for (let i = 0; i < 5; i++) {
+  timmy.exercise();
+}
+
+for (let i = 0; i < 9; i++) {
+  timmy.ageUp();
+}
+
+// console.log(timmy);
+
+// *    Create a hamster named "Gus"
+// *    Set Gus's owner to the string "Timmy"
+// *    Have Timmy "buy" Gus
+// *    Age Timmy 15 years
+// *    Have Timmy eat twice
+// *    Have Timmy exercise twice
+
+const gus = new Hamster("Gus");
+gus.owner = "Timmy";
+timmy.buyHamster(gus);
+// console.log(gus);
+
+for (let i = 0; i < 15; i++) {
+  timmy.ageUp();
+}
+
+for (let i = 0; i < 2; i++) {
+  timmy.eat();
+}
+
+for (let i = 0; i < 2; i++) {
+  timmy.exercise();
+}
+
+console.log(timmy);
