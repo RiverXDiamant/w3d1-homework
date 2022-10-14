@@ -160,3 +160,37 @@ for (let i = 0; i < 2; i++) {
 }
 
 console.log(timmy);
+
+// * Chef Make Dinners
+// class Dinner {
+
+// }
+
+// class Chef {
+
+// }
+// * Chef should be a factory of Dinner
+// * Add a constructor to dinner that sets the string properties, appetizer, entree and dessert.
+// * Add a method on chef that takes three arguments and returns a new Dinner based on those arguments.
+// * Have the Chef create 3 dinners, log the dinners
+
+class Dinner {
+  constructor(appetizer, entree, dessert) {
+    this.appetizer = appetizer;
+    this.entree = entree;
+    this.dessert = dessert;
+  }
+}
+
+class Chef extends Dinner {
+  makeDinner(dinner1, dinner2, dinner3) {
+    const dinner = new Dinner(dinner1, dinner2, dinner3);
+    return dinner;
+  }
+}
+const ramsay = new Chef();
+console.log(ramsay.makeDinner("Salad", "Lasagna", "Cheesecake"));
+console.log(
+  ramsay.makeDinner("Breadsticks", "Chicken Parmesean", "Rootbeer Float")
+);
+console.log(ramsay.makeDinner("Crab Cakes", "Ribeye Steak", "Apple Pie"));
