@@ -183,8 +183,8 @@ class Dinner {
 }
 
 class Chef extends Dinner {
-  makeDinner(dinner1, dinner2, dinner3) {
-    const dinner = new Dinner(dinner1, dinner2, dinner3);
+  makeDinner(menuAppetizer, menuEntree, menuDessert) {
+    const dinner = new Dinner(menuAppetizer, menuEntree, menuDessert);
     return dinner;
   }
 }
